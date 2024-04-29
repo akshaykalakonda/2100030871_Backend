@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Locations</title>
+</head>
+<body>
+    <h1>Canada Locations Without Using SQL Join</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Location ID</th>
+                <th>Street Address</th>
+                <th>Postal Code</th>
+                <th>City</th>
+                <th>State/Province</th>
+                <th>Country ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for location in locations %}
+            <tr>
+                <td>{{ location.location_id }}</td>
+                <td>{{ location.street_address }}</td>
+                 <td>{{ location.postal_code }}</td>
+                <td>{{ location.city }}</td>
+                <td>{{ location.state_province }}</td>
+                <td>{{ location.country_name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
