@@ -40,7 +40,8 @@ def add_location(request):
         return render(request, "displayLocation.html", {'locations': locations})
 
 def addloc(request):
-    return render(request, "addLocation.html")
+    locations = Location.objects.all()
+    return render(request, "addLocation.html",{'locations': locations})
 
 def display_locations(request):
     # Query the database to retrieve all location objects

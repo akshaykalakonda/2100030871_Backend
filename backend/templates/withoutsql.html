@@ -4,8 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Locations</title>
+    <style>
+                .navbar{
+            background-color: black;
+            border-radius: 30px;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float:left;
+            list-style: none;
+            margin: 13px 20px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+    </style>
 </head>
 <body>
+<header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'country' %}">Add Country</a></li>
+                <li><a href="{% url 'displaycountry' %}">Display Countries</a></li>
+                <li><a href="{% url 'addLocation' %}">Add Location</a></li>
+                <li><a href="{% url 'display_locations' %}">Display Locations</a></li>
+                 <li><a href="{% url 'canada_addresses' %}">Answer 1 </a></li>
+                 <li><a href="{% url 'canada_address' %}">Answer 2 </a></li>
+            </ul>
+        </nav>
+    </header>
     <h1>Canada Locations Without Using SQL Join</h1>
     <table border="1">
         <thead>
